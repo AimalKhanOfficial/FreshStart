@@ -3,6 +3,13 @@
  * @return {boolean}
  */
 var containsDuplicate = function(nums) {
+    //Improved version - HashMaps?
+    let myMap = new Map();
+    for (let i = 0; i < nums.length; i++) { 
+        myMap.set(nums[i], nums[i])
+    }
+    return myMap.size !== nums.length;
+  
     // This works - Runtime: 71 ms
     // for (let i = 0; i < nums.length; i++) {
     //     for (let j = 0; j < nums.length; j++) {
